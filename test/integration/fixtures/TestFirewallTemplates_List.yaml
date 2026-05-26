@@ -24,8 +24,8 @@ interactions:
       "1234::5678/128", "1234::5678/128",
       "1234::5678/128"]}, "ports": "22,443", "protocol": "TCP",
       "label": "accept-inbound-tcp-ssh-proxies", "description": "Accept inbound TCP
-      from SSH proxies"}, {"action": "ACCEPT", "addresses": {"ipv4": ["139.144.212.168/31",
-      "172.232.23.164/31"]}, "ports": "22,443", "protocol": "TCP", "label": "accept-inbound-tcp-eaa-proxies",
+      from SSH proxies"}, {"action": "ACCEPT", "addresses": {"ipv4": ["192.0.2.0/31",
+      "192.0.2.0/31"]}, "ports": "22,443", "protocol": "TCP", "label": "accept-inbound-tcp-eaa-proxies",
       "description": "Accept inbound TCP from EAA proxies"}], "inbound_policy": "DROP",
       "outbound": [], "outbound_policy": "ACCEPT"}}, {"slug": "vpc", "rules": {"inbound":
       [{"action": "ACCEPT", "addresses": {"ipv4": ["0.0.0.0/0"], "ipv6": ["1234::5678/0"]},

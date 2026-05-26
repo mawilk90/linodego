@@ -93,7 +93,7 @@ interactions:
     url: https://api.linode.com/v4beta/object-storage/buckets
     method: POST
   response:
-    body: '{"hostname": "linode-obj-bucket-cert-test.xyz.fr-par-1.linodeobjects.com",
+    body: '{"hostname":"[SANITIZED]",
       "label": "linode-obj-bucket-cert-test.xyz", "created": "2018-01-02T03:04:05",
       "region": "fr-par", "cluster": "fr-par-1", "size": 0, "objects": 0, "endpoint_type":
       "E1", "s3_endpoint": "fr-par-1.linodeobjects.com"}'
