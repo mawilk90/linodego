@@ -406,6 +406,43 @@ func TestVPC_DefaultRanges(t *testing.T) {
 	)
 }
 
+func TestVPC_IPv4RangesForbidden(t *testing.T) {
+	client, teardown := createTestClient(t, "fixtures/TestVPC_IPv4RangesForbidden")
+	defer teardown()
+
+	ctx := context.Background()
+	regions := getRegionsWithCaps(t, client, []linodego.RegionCapability{CapabilityVPCCustomIPv4Ranges})
+	require.NotEmpty(t, regions, "no region with Custom VPC IPv4 Ranges capability available")
+
+	dr, err := client.GetVPCDefaultRanges(context.Background())
+	require.NoError(t, err, "failed to get VPC default ranges")
+	require.NotEmpty(t, dr.ForbiddenIPV4Ranges,
+		"expected forbidden IPv4 ranges to be present, got %+v", dr,
+	)
+
+	forbiddenRange := dr.ForbiddenIPV4Ranges[0]
+	createOpts := linodego.VPCCreateOptions{
+		Label:  "go-test-vpc-" + getUniqueText(),
+		Region: regions[0],
+		IPv4: []linodego.VPCCreateOptionsIPv4{
+			{Range: linodego.Pointer(forbiddenRange)},
+		},
+	}
+	_, err = client.CreateVPC(ctx, createOpts)
+
+	e, ok := err.(*Error)
+	if !ok {
+		t.Fatalf("expected a *linodego.Error, got: %v", err)
+	}
+	if e.Code != 400 {
+		t.Errorf("expected 400 for forbidden IPv4 range, got %d", e.Code)
+	}
+	expectedErrorMessage := "is a subnet of the forbidden IPv4 range"
+	if !strings.Contains(e.Message, expectedErrorMessage) {
+		t.Errorf("expected error message to contain %q, got: %s", expectedErrorMessage, e.Message)
+	}
+}
+
 // requireIPv4Contains asserts that ranges contains an entry matching wantRange.
 func requireIPv4Contains(t *testing.T, ranges []linodego.VPCIPv4Range, wantRange, context string) {
 	t.Helper()
