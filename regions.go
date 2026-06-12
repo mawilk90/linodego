@@ -11,10 +11,10 @@ type RegionCapability string
 // This is an enumeration of Capabilities Linode offers that can be referenced
 // through the user-facing parts of the application.
 const (
+	CapabilityACLB                             RegionCapability = "Akamai Cloud Load Balancer"
 	CapabilityACLP                             RegionCapability = "Akamai Cloud Pulse"
 	CapabilityACLPStreams                      RegionCapability = "Akamai Cloud Pulse Streams"
 	CapabilityAkamaiRAMProtection              RegionCapability = "Akamai RAM Protection"
-	CapabilityACLB                             RegionCapability = "Akamai Cloud Load Balancer"
 	CapabilityBackups                          RegionCapability = "Backups"
 	CapabilityBlockStorage                     RegionCapability = "Block Storage"
 	CapabilityBlockStorageEncryption           RegionCapability = "Block Storage Encryption"
@@ -30,6 +30,7 @@ const (
 	CapabilityDistributedPlans                 RegionCapability = "Distributed Plans"
 	CapabilityEdgePlans                        RegionCapability = "Edge Plans"
 	CapabilityGPU                              RegionCapability = "GPU Linodes"
+	CapabilityGPUDirectRDMA                    RegionCapability = "GPUDirect RDMA"
 	CapabilityKubernetesEnterprise             RegionCapability = "Kubernetes Enterprise"
 	CapabilityKubernetesEnterpriseBYOVPC       RegionCapability = "Kubernetes Enterprise BYO VPC"
 	CapabilityKubernetesEnterpriseDualStack    RegionCapability = "Kubernetes Enterprise Dual Stack"
