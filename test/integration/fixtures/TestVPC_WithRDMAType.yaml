@@ -88,7 +88,7 @@ interactions:
     code: 200
     duration: ""
 - request:
-    body: '{"label":"go-test-vpc-1781268427804220000","region":"pl-labkrk-2","vpc_type":"rdma"}'
+    body: '{"label":"go-test-vpc-1781521627618027000","region":"pl-labkrk-2","vpc_type":"rdma"}'
     form: {}
     headers:
       Accept:
@@ -100,7 +100,7 @@ interactions:
     url: https://api.devcloud.linode.com/v4beta/vpcs
     method: POST
   response:
-    body: '{"id": 411786, "label": "go-test-vpc-1781268427804220000", "description":
+    body: '{"id": 484600, "label": "go-test-vpc-1781521627618027000", "description":
       "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
       "ipv6": null, "subnets": [], "vpc_type": "rdma", "created": "2018-01-02T03:04:05",
       "updated": "2018-01-02T03:04:05"}'
@@ -159,10 +159,10 @@ interactions:
       - application/json
       User-Agent:
       - linodego/dev https://github.com/linode/linodego
-    url: https://api.devcloud.linode.com/v4beta/vpcs/411786
+    url: https://api.devcloud.linode.com/v4beta/vpcs/484600
     method: GET
   response:
-    body: '{"id": 411786, "label": "go-test-vpc-1781268427804220000", "description":
+    body: '{"id": 484600, "label": "go-test-vpc-1781521627618027000", "description":
       "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
       "ipv6": null, "subnets": [], "vpc_type": "rdma", "created": "2018-01-02T03:04:05",
       "updated": "2018-01-02T03:04:05"}'
@@ -223,418 +223,15 @@ interactions:
       - application/json
       User-Agent:
       - linodego/dev https://github.com/linode/linodego
+      X-Filter:
+      - '{"vpc_type":"rdma"}'
     url: https://api.devcloud.linode.com/v4beta/vpcs?page=1
     method: GET
   response:
-    body: '{"data": [{"id": 15, "label": "vpc-BbMJzPVU2Z", "description": "My cool
-      new VPC", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range":
-      "192.168.0.0/17"}], "ipv6": null, "subnets": [{"id": 14, "label": "vpc-subnet-tPFjhX5nXK",
-      "ipv4": "10.0.255.0/24", "ipv6": null, "linodes": [{"id": 99802174, "interfaces":
-      [{"id": 16232, "config_id": null, "active": true}]}], "databases": [], "nodebalancers":
-      [{"id": 329237, "ipv4_range": "10.0.255.8/30", "ipv6_ranges": null}], "vpc_type":
-      "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 37, "label": "vpc-6AleShKLCW", "description": "My cool new VPC", "region":
-      "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": null, "subnets": [{"id": 20, "label": "vpc-subnet-akNggNu1q3", "ipv4":
-      "10.0.255.0/24", "ipv6": null, "linodes": [], "databases": [], "nodebalancers":
-      [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 130, "label": "vpc-bAGHsYm9BJ", "description": "My cool new VPC", "region":
-      "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": null, "subnets": [{"id": 106, "label": "vpc-subnet-NTdRc5Gymk", "ipv4":
-      "10.0.255.0/24", "ipv6": null, "linodes": [], "databases": [], "nodebalancers":
-      [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 31657, "label": "vpc-ds", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range":
-      "1234::5678/52"}], "subnets": [{"id": 43805, "label": "test", "ipv4":
-      "10.0.0.0/24", "ipv6": null, "linodes": [], "databases": [], "nodebalancers":
-      [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 43806, "label": "ipv6", "ipv4": "10.0.1.0/24", "ipv6": [{"range": "1234::5678/56"}],
-      "linodes": [{"id": 99635289, "interfaces": [{"id": 24403, "config_id": null,
-      "active": false}]}], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      44659, "label": "test2", "ipv4": "10.0.2.0/24", "ipv6": [{"range": "1234::5678/56"}],
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      44667, "label": "test1", "ipv4": "10.0.3.0/24", "ipv6": [{"range": "1234::5678/56"}],
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      44703, "label": "123", "ipv4": "10.0.4.0/24", "ipv6": [{"range": "1234::5678/53"}],
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      44704, "label": "456", "ipv4": "10.0.5.0/24", "ipv6": [{"range": "1234::5678/56"}],
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "vpc_type":
-      "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 32472, "label": "test1", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range":
-      "1234::5678/52"}], "subnets": [{"id": 45142, "label": "test2", "ipv4":
-      "10.0.0.0/24", "ipv6": [{"range": "1234::5678/58"}], "linodes": [{"id":
-      99499019, "interfaces": [{"id": 352278, "config_id": 466993, "active": true}]}],
-      "databases": [], "nodebalancers": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 40903, "label": "coeol-vpc", "description":
-      "A description of my VPC.", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"},
-      {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}], "subnets":
-      [{"id": 57318, "label": "cool-vpc-subnet", "ipv4": "10.0.1.0/24", "ipv6": null,
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "vpc_type":
-      "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 42673, "label": "test123", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range":
-      "1234::5678/52"}], "subnets": [{"id": 59601, "label": "test123", "ipv4":
-      "10.0.0.0/24", "ipv6": [{"range": "1234::5678/57"}], "linodes": [], "databases":
-      [], "nodebalancers": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 46808, "label": "coeoerl-vpc", "description":
-      "A description of my VPC.", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"},
-      {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}], "subnets":
-      [{"id": 65164, "label": "cool-vpc-subnet", "ipv4": "10.0.1.0/24", "ipv6": null,
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "vpc_type":
-      "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 46876, "label": "coeoetyrl-vpc", "description": "A description of my
-      VPC.", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range":
-      "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}], "subnets": [{"id":
-      65247, "label": "cool-vpc-subnet", "ipv4": "10.0.1.0/24", "ipv6": null, "linodes":
-      [], "databases": [], "nodebalancers": [], "vpc_type": "regular", "created":
-      "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      49590, "label": "dual-stack-vpc", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range":
-      "1234::5678/52"}], "subnets": [{"id": 69178, "label": "dual-stack-subnet",
-      "ipv4": "10.0.0.0/13", "ipv6": [{"range": "1234::5678/56"}], "linodes":
-      [], "databases": [], "nodebalancers": [], "vpc_type": "regular", "created":
-      "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id": 130409, "label":
-      "lke38753", "ipv4": "10.8.0.0/13", "ipv6": null, "linodes": [], "databases":
-      [], "nodebalancers": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 51000, "label": "hello-db-dualstack",
-      "description": "Dual Stack in DevCloud", "region": "pl-labkrk-2", "ipv4": [{"range":
-      "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}],
-      "subnets": [{"id": 72159, "label": "hello-sn-1", "ipv4": "10.0.0.0/24", "ipv6":
-      [{"range": "1234::5678/62"}], "linodes": [{"id": 100389076, "interfaces":
-      [{"id": 568556, "config_id": 1308960, "active": true}]}, {"id": 100389093, "interfaces":
-      [{"id": 568576, "config_id": 1308977, "active": true}]}, {"id": 100395635, "interfaces":
-      [{"id": 571155, "config_id": 1315443, "active": true}]}], "databases": [], "nodebalancers":
-      [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 72160, "label": "hello-sn-2", "ipv4": "10.0.1.0/24", "ipv6": [{"range":
-      "1234::5678/56"}], "linodes": [{"id": 100389079, "interfaces": [{"id":
-      568560, "config_id": 1308963, "active": true}]}, {"id": 100389082, "interfaces":
-      [{"id": 568563, "config_id": 1308966, "active": true}]}], "databases": [], "nodebalancers":
-      [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 58200, "label": "lke33954", "description": "workload VPC for LKE Enterprise
-      Cluster lke33954", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"},
-      {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}], "subnets":
-      [{"id": 75580, "label": "lke33954", "ipv4": "10.0.0.0/13", "ipv6": [{"range":
-      "1234::5678/52"}], "linodes": [], "databases": [], "nodebalancers": [],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 63448, "label": "lke35928", "description": "workload VPC for LKE Enterprise
-      Cluster lke35928", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"},
-      {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}], "subnets":
-      [{"id": 83490, "label": "lke35928", "ipv4": "10.0.0.0/13", "ipv6": [{"range":
-      "1234::5678/52"}], "linodes": [], "databases": [], "nodebalancers": [],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 64718, "label": "lke36826", "description": "workload VPC for LKE Enterprise
-      Cluster lke36826", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"},
-      {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}], "subnets":
-      [{"id": 86005, "label": "lke36826", "ipv4": "10.0.0.0/13", "ipv6": [{"range":
-      "1234::5678/52"}], "linodes": [], "databases": [], "nodebalancers": [],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 88010, "label": "testvpc", "description": "test", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": null,
-      "subnets": [{"id": 117116, "label": "1", "ipv4": "10.0.1.0/24", "ipv6": null,
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "vpc_type":
-      "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 88011, "label": "test23vpc", "description": "A description of my VPC.",
-      "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": null, "subnets": [{"id": 117118, "label": "testvpcsubnet", "ipv4": "10.0.1.0/24",
-      "ipv6": null, "linodes": [], "databases": [], "nodebalancers": [], "vpc_type":
-      "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 88277, "label": "test232vpc", "description": "A description of my VPC.",
-      "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/48"}], "subnets": [{"id": 117548, "label":
-      "testvpcsubnet", "ipv4": "10.0.1.0/24", "ipv6": null, "linodes": [], "databases":
-      [], "nodebalancers": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 88829, "label": "test23w2vpc", "description":
-      "A description of my VPC.", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"},
-      {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}], "subnets":
-      [{"id": 117950, "label": "testvpcsubnet", "ipv4": "10.0.1.0/24", "ipv6": null,
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "vpc_type":
-      "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 88830, "label": "tesw2vpc", "description": "A description of my VPC.",
-      "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [{"id": 117951, "label":
-      "testvpcsubnet", "ipv4": "10.0.1.0/24", "ipv6": [{"range": "1234::5678/56"}],
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "vpc_type":
-      "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 88858, "label": "tesww2vpc", "description": "A description of my VPC.",
-      "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [{"id": 117995, "label":
-      "testvpcsubnet", "ipv4": "10.0.1.0/24", "ipv6": [{"range": "1234::5678/56"}],
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      117997, "label": "tesr", "ipv4": "10.0.2.0/24", "ipv6": [{"range": "1234::5678/56"}],
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "vpc_type":
-      "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 88860, "label": "tk89", "description": "", "region": "pl-labkrk-2", "ipv4":
-      [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": null, "subnets":
-      [{"id": 117998, "label": "2", "ipv4": "10.0.0.0/24", "ipv6": null, "linodes":
-      [], "databases": [], "nodebalancers": [], "vpc_type": "regular", "created":
-      "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id": 117999, "label":
-      "re", "ipv4": "10.0.1.0/24", "ipv6": null, "linodes": [], "databases": [], "nodebalancers":
-      [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 118000, "label": "werr", "ipv4": "10.0.2.0/24", "ipv6": null, "linodes":
-      [], "databases": [], "nodebalancers": [], "vpc_type": "regular", "created":
-      "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      88863, "label": "covpc", "description": "A description of my VPC.", "region":
-      "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": null, "subnets": [{"id": 118005, "label": "cool-vpc-subnet", "ipv4":
-      "10.0.1.0/24", "ipv6": null, "linodes": [], "databases": [], "nodebalancers":
-      [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 88874, "label": "hqxro-vpc", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range":
-      "1234::5678/52"}], "subnets": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 88875, "label": "gjoag-vpc", "description":
+    body: '{"data": [{"id": 484600, "label": "go-test-vpc-1781521627618027000", "description":
       "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      88876, "label": "tww2vpc", "description": "A description of my VPC.", "region":
-      "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [{"id": 118010, "label":
-      "testvpcsubnet", "ipv4": "10.0.1.0/24", "ipv6": [{"range": "1234::5678/56"}],
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      118012, "label": "test", "ipv4": "10.0.2.0/29", "ipv6": [{"range": "1234::5678/56"}],
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "vpc_type":
-      "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 88877, "label": "jvsdb-vpc52", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range":
-      "1234::5678/52"}], "subnets": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 88881, "label": "nzqbh-vpc", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      88882, "label": "uzjry-vpc52", "description": "", "region": "pl-labkrk-2", "ipv4":
-      [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}],
-      "subnets": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated":
-      "2018-01-02T03:04:05"}, {"id": 89763, "label": "srosllabel", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [{"id": 118414, "label":
-      "xabswlabel", "ipv4": "10.0.0.0/24", "ipv6": null, "linodes": [], "databases":
-      [], "nodebalancers": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 89765, "label": "jzgeglabel", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [{"id": 118415, "label":
-      "tsdfjlabel", "ipv4": "10.0.0.0/24", "ipv6": null, "linodes": [], "databases":
-      [], "nodebalancers": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 89769, "label": "gegozlabel", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [{"id": 118416, "label":
-      "hcojnlabel", "ipv4": "10.0.0.0/24", "ipv6": null, "linodes": [], "databases":
-      [], "nodebalancers": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 89770, "label": "xcgxz-vpc", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      89771, "label": "rbwcf-vpc52", "description": "", "region": "pl-labkrk-2", "ipv4":
-      [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}],
-      "subnets": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated":
-      "2018-01-02T03:04:05"}, {"id": 89776, "label": "ynkrklabel", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [{"id": 118418, "label":
-      "jughxlabel", "ipv4": "10.0.0.0/24", "ipv6": null, "linodes": [], "databases":
-      [], "nodebalancers": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 89778, "label": "alzxflabel", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [{"id": 118419, "label":
-      "ajtcflabel", "ipv4": "10.0.0.0/24", "ipv6": null, "linodes": [], "databases":
-      [], "nodebalancers": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 89782, "label": "qscuwlabel", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [{"id": 118420, "label":
-      "rnvzglabel", "ipv4": "10.0.0.0/24", "ipv6": null, "linodes": [], "databases":
-      [], "nodebalancers": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 89783, "label": "xocqv-vpc", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      89784, "label": "ffkdh-vpc52", "description": "", "region": "pl-labkrk-2", "ipv4":
-      [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}],
-      "subnets": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated":
-      "2018-01-02T03:04:05"}, {"id": 90817, "label": "tetsvpc", "description": "A
-      description of my VPC.", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"},
-      {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}], "subnets":
-      [{"id": 119156, "label": "testvpcsubnet", "ipv4": "10.0.1.0/24", "ipv6": null,
-      "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      119157, "label": "cool-vpc-subnet", "ipv4": "10.0.2.0/24", "ipv6": [{"range":
-      "1234::5678/56"}], "linodes": [], "databases": [], "nodebalancers": [],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 90831, "label": "oiykslabel", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range":
-      "1234::5678/52"}], "subnets": [{"id": 119162, "label": "ugkoolabel", "ipv4":
-      "10.0.0.0/24", "ipv6": null, "linodes": [], "databases": [], "nodebalancers":
-      [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 90833, "label": "iwocllabel", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range":
-      "1234::5678/52"}], "subnets": [{"id": 119164, "label": "uhluglabel", "ipv4":
-      "10.0.0.0/24", "ipv6": null, "linodes": [], "databases": [], "nodebalancers":
-      [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 90839, "label": "fjcyflabel", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range":
-      "1234::5678/52"}], "subnets": [{"id": 119167, "label": "otbxdlabel", "ipv4":
-      "10.0.0.0/24", "ipv6": null, "linodes": [], "databases": [], "nodebalancers":
-      [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 90840, "label": "nguxe-vpc", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range":
-      "1234::5678/52"}], "subnets": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 90841, "label": "ffgeb-vpc52", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      90856, "label": "lkyec-vpc", "description": "", "region": "pl-labkrk-2", "ipv4":
-      [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}],
-      "subnets": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated":
-      "2018-01-02T03:04:05"}, {"id": 90857, "label": "rxanx-vpc52", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      94077, "label": "udchm-vpc", "description": "", "region": "pl-labkrk-2", "ipv4":
-      [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}],
-      "subnets": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated":
-      "2018-01-02T03:04:05"}, {"id": 94078, "label": "lsvzb-vpc52", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      94107, "label": "ddlmzlabel", "description": "", "region": "pl-labkrk-2", "ipv4":
-      [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}],
-      "subnets": [{"id": 140329, "label": "durjalabel", "ipv4": "10.0.0.0/24", "ipv6":
-      null, "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "vpc_type":
-      "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 94125, "label": "vbihw-vpc", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range":
-      "1234::5678/52"}], "subnets": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 94126, "label": "summb-vpc52", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      94149, "label": "vxzeh-vpc", "description": "", "region": "pl-labkrk-2", "ipv4":
-      [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}],
-      "subnets": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated":
-      "2018-01-02T03:04:05"}, {"id": 94151, "label": "tkbmr-vpc52", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      94164, "label": "jmmvt-vpc", "description": "", "region": "pl-labkrk-2", "ipv4":
-      [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}],
-      "subnets": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated":
-      "2018-01-02T03:04:05"}, {"id": 94166, "label": "xdkhn-vpc52", "description":
-      "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      126737, "label": "nlb-linode", "description": "", "region": "pl-labkrk-2", "ipv4":
-      [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}],
-      "subnets": [{"id": 177605, "label": "nlb-linode", "ipv4": null, "ipv6": [{"range":
-      "1234::5678/52"}], "linodes": [{"id": 100601663, "interfaces": [{"id":
-      648056, "config_id": 1517928, "active": true}]}], "databases": [], "nodebalancers":
-      [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 126860, "label": "vpc-1", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": null,
-      "subnets": [{"id": 177801, "label": "subnet-1", "ipv4": "10.0.0.0/24", "ipv6":
-      null, "linodes": [], "databases": [], "nodebalancers": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "vpc_type":
-      "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 173978, "label": "akjemsbdhq", "description": "test description", "region":
-      "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      191822, "label": "mw-vpc1", "description": "Test VPC for frontend vpcs", "region":
-      "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": null, "subnets": [{"id": 227804, "label": "mw-vpc-subnet-dual", "ipv4":
-      "10.0.0.0/24", "ipv6": null, "linodes": [], "databases": [], "nodebalancers":
-      [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 191858, "label": "mw-vpc2", "description": "Test VPC for frontend vpcs",
-      "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": null, "subnets": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 191874, "label": "mw-vpc3", "description":
-      "Dual", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range":
-      "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}], "subnets": [{"id":
-      227880, "label": "mw-subnet-label", "ipv4": "10.0.0.0/24", "ipv6": [{"range":
-      "1234::5678/62"}], "linodes": [], "databases": [], "nodebalancers": [],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 198108, "label": "mw-vpc10", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": [{"range":
-      "1234::5678/52"}], "subnets": [{"id": 233798, "label": "mw-subnet1-ipv4",
-      "ipv4": "10.0.0.0/24", "ipv6": [{"range": "1234::5678/56"}], "linodes":
-      [], "databases": [], "nodebalancers": [], "vpc_type": "regular", "created":
-      "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}, {"id":
-      198109, "label": "ivobhdtdse", "description": "test description", "region":
-      "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": [{"range": "1234::5678/52"}], "subnets": [{"id": 233799, "label":
-      "test-subnet", "ipv4": "10.0.0.0/24", "ipv6": [{"range": "1234::5678/56"}],
-      "linodes": [], "databases": [], "nodebalancers": [{"id": 634492, "ipv4_range":
-      "10.0.0.2/32", "ipv6_ranges": [{"range": "1234::5678/64"}]}], "vpc_type":
-      "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 201363, "label": "mw-vpc1-retest", "description": "", "region": "pl-labkrk-2",
-      "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}], "ipv6": null,
-      "subnets": [{"id": 236403, "label": "mw-subnet1-retest", "ipv4": "10.0.0.0/24",
-      "ipv6": null, "linodes": [], "databases": [], "nodebalancers": [{"id": 643297,
-      "ipv4_range": "10.0.0.4/32", "ipv6_ranges": null}, {"id": 643297, "ipv4_range":
-      "10.0.0.8/30", "ipv6_ranges": null}], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 202657, "label": "xrpzkhtvic", "description":
-      "test description", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"},
-      {"range": "192.168.0.0/17"}], "ipv6": [{"range": "1234::5678/52"}], "subnets":
-      [{"id": 237684, "label": "test-subnet", "ipv4": "10.0.0.0/24", "ipv6": [{"range":
-      "1234::5678/56"}], "linodes": [], "databases": [], "nodebalancers": [],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 370913, "label": "go-test-vpc-1781187218518727000", "description": "",
-      "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": null, "subnets": [{"id": 354696, "label": "linodego-vpc-test-1781187220088858000",
-      "ipv4": "192.168.0.0/25", "ipv6": null, "linodes": [], "databases": [], "nodebalancers":
-      [], "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}],
-      "vpc_type": "regular", "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"},
-      {"id": 407824, "label": "go-test-vpc-1781260577553870000", "description": "",
-      "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"}, {"range": "192.168.0.0/17"}],
-      "ipv6": null, "subnets": [], "vpc_type": "regular", "created": "2018-01-02T03:04:05",
-      "updated": "2018-01-02T03:04:05"}, {"id": 411786, "label": "go-test-vpc-1781268427804220000",
-      "description": "", "region": "pl-labkrk-2", "ipv4": [{"range": "10.0.0.0/8"},
-      {"range": "192.168.0.0/17"}], "ipv6": null, "subnets": [], "vpc_type": "rdma",
-      "created": "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "page":
-      1, "pages": 1, "results": 68}'
+      "ipv6": null, "subnets": [], "vpc_type": "rdma", "created": "2018-01-02T03:04:05",
+      "updated": "2018-01-02T03:04:05"}], "page": 1, "pages": 1, "results": 1}'
     headers:
       Access-Control-Allow-Credentials:
       - "true"
@@ -653,6 +250,8 @@ interactions:
       - private, max-age=60, s-maxage=60
       Connection:
       - keep-alive
+      Content-Length:
+      - "332"
       Content-Security-Policy:
       - default-src 'none'
       Content-Type:
@@ -690,7 +289,7 @@ interactions:
       - application/json
       User-Agent:
       - linodego/dev https://github.com/linode/linodego
-    url: https://api.devcloud.linode.com/v4beta/vpcs/411786
+    url: https://api.devcloud.linode.com/v4beta/vpcs/484600
     method: DELETE
   response:
     body: '{}'
