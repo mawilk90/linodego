@@ -433,7 +433,7 @@ interactions:
       Content-Type:
       - application/json
       Expires:
-      - Thu, 24 Sep 2026 11:31:19 GMT
+      - Fri, 25 Sep 2026 13:30:04 GMT
       Pragma:
       - no-cache
       Strict-Transport-Security:
@@ -459,7 +459,7 @@ interactions:
     code: 200
     duration: ""
 - request:
-    body: '{"region":"au-mel","addresses":null,"label":"go-test-nat-gateway-m1to6989wk4n"}'
+    body: '{"region":"au-mel","addresses":null,"label":"go-test-nat-gateway-lnoz5c1170c1"}'
     form: {}
     headers:
       Accept:
@@ -471,8 +471,8 @@ interactions:
     url: https://api.linode.com/v4beta/networking/natgateways
     method: POST
   response:
-    body: '{"id": 161, "region": "au-mel", "addresses": [], "address_autoscale_max":
-      20, "default_ports_per_interface": 4096, "label": "go-test-nat-gateway-m1to6989wk4n",
+    body: '{"id": 199, "region": "au-mel", "addresses": [], "address_autoscale_max":
+      20, "default_ports_per_interface": 4096, "label": "go-test-nat-gateway-lnoz5c1170c1",
       "portset_assignments": 0, "portset_capacity": 300, "vpc_subnet": null, "created":
       "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}'
     headers:
@@ -499,7 +499,7 @@ interactions:
       Content-Type:
       - application/json
       Expires:
-      - Thu, 24 Sep 2026 11:31:20 GMT
+      - Fri, 25 Sep 2026 13:30:05 GMT
       Pragma:
       - no-cache
       Strict-Transport-Security:
@@ -530,11 +530,11 @@ interactions:
       - application/json
       User-Agent:
       - linodego/dev https://github.com/linode/linodego
-    url: https://api.linode.com/v4beta/networking/natgateways/161
+    url: https://api.linode.com/v4beta/networking/natgateways/199
     method: GET
   response:
-    body: '{"id": 161, "region": "au-mel", "addresses": [], "address_autoscale_max":
-      20, "default_ports_per_interface": 4096, "label": "go-test-nat-gateway-m1to6989wk4n",
+    body: '{"id": 199, "region": "au-mel", "addresses": [], "address_autoscale_max":
+      20, "default_ports_per_interface": 4096, "label": "go-test-nat-gateway-lnoz5c1170c1",
       "portset_assignments": 0, "portset_capacity": 300, "vpc_subnet": null, "created":
       "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}'
     headers:
@@ -561,7 +561,7 @@ interactions:
       Content-Type:
       - application/json
       Expires:
-      - Thu, 24 Sep 2026 11:31:20 GMT
+      - Fri, 25 Sep 2026 13:30:05 GMT
       Pragma:
       - no-cache
       Strict-Transport-Security:
@@ -596,12 +596,12 @@ interactions:
       User-Agent:
       - linodego/dev https://github.com/linode/linodego
       X-Filter:
-      - '{"label":"go-test-nat-gateway-m1to6989wk4n"}'
+      - '{"label":"go-test-nat-gateway-lnoz5c1170c1"}'
     url: https://api.linode.com/v4beta/networking/natgateways?page=1
     method: GET
   response:
-    body: '{"data": [{"id": 161, "region": "au-mel", "addresses": [], "address_autoscale_max":
-      20, "default_ports_per_interface": 4096, "label": "go-test-nat-gateway-m1to6989wk4n",
+    body: '{"data": [{"id": 199, "region": "au-mel", "addresses": [], "address_autoscale_max":
+      20, "default_ports_per_interface": 4096, "label": "go-test-nat-gateway-lnoz5c1170c1",
       "portset_assignments": 0, "portset_capacity": 300, "vpc_subnet": null, "created":
       "2018-01-02T03:04:05", "updated": "2018-01-02T03:04:05"}], "page": 1, "pages":
       1, "results": 1}'
@@ -629,7 +629,7 @@ interactions:
       Content-Type:
       - application/json
       Expires:
-      - Thu, 24 Sep 2026 11:31:20 GMT
+      - Fri, 25 Sep 2026 13:30:05 GMT
       Pragma:
       - no-cache
       Strict-Transport-Security:
@@ -663,7 +663,7 @@ interactions:
       - application/json
       User-Agent:
       - linodego/dev https://github.com/linode/linodego
-    url: https://api.linode.com/v4beta/networking/natgateways/161
+    url: https://api.linode.com/v4beta/networking/natgateways/199
     method: DELETE
   response:
     body: '{}'
@@ -691,7 +691,7 @@ interactions:
       Content-Type:
       - application/json
       Expires:
-      - Thu, 24 Sep 2026 11:31:20 GMT
+      - Fri, 25 Sep 2026 13:30:06 GMT
       Pragma:
       - no-cache
       Strict-Transport-Security:
